@@ -6,10 +6,17 @@ const ProductContext = React.createContext();
 //consumer
 
 class ProductProvider extends Component {
-  state = {
-    products: [],
-    detailProduct
-  };
+  constructor() {
+    super();
+
+    this.state = {
+      products: [],
+      detailProduct,
+      cart: [],
+      isModalOpen: false,
+      modalProduct: detailProduct
+    };
+  }
 
   componentDidMount() {
     this.setProducts();
@@ -24,21 +31,72 @@ class ProductProvider extends Component {
 
     this.setState({ products: tempProducts });
   };
-
-  handleDetail = () => {
-    console.log("hello from detail");
+  // returns product id from product array
+  getProduct = id => {
+    const product = this.state.products.find(product => product.id === id);
+    return product;
   };
-
+  // sets detailProduct to whatever product id set as argument
+  setDetailProduct = id => {
+    const product = this.getProduct(id);
+    this.setState(() => {
+      return {
+        detailProduct: product
+      };
+    });
+  };
+  // product id passed as argument is added into cart array and updated product is added back into products array
+  //tempProduct IS GETTING UPDATED IMPLICITLY
   addToCart = id => {
-    console.log(`hello from add to cart the id is ${id}`);
+    let tempProducts = [...this.state.products];
+    const index = tempProducts.indexOf(this.getProduct(id));
+    const product = tempProducts[index];
+    const price = product.price;
+
+    product.total = price;
+    product.inCart = true;
+    product.count = 1;
+
+    this.setState(
+      () => {
+        return {
+          products: tempProducts,
+          cart: [...this.state.cart, product]
+        };
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
+  };
+  // opens modal for passed id when product is clicked
+  openModal = id => {
+    const product = this.getProduct(id);
+
+    this.setState(() => {
+      return {
+        modalProduct: product,
+        isModalOpen: true
+      };
+    });
+  };
+  // closes modal when product is clicked
+  closeModal = () => {
+    this.setState(() => {
+      return {
+        isModalOpen: false
+      };
+    });
   };
   render() {
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
-          handleDetail: this.handleDetail,
-          addToCart: this.addToCart
+          setDetailProduct: this.setDetailProduct,
+          addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal: this.closeModal
         }}
       >
         {this.props.children}

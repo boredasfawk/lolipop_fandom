@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { ProductConsumer } from "../Context";
-import Product from "./Product";
+//import Product from "./Product";
 import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
 
 class Details extends Component {
-  state = {};
   render() {
     return (
       <ProductConsumer>
@@ -35,7 +34,7 @@ class Details extends Component {
                   <img
                     src={img}
                     className="img-fluid"
-                    alt={`product image: ${id}`}
+                    alt={`product id: ${id}`}
                   />
                 </div>
 
@@ -64,8 +63,9 @@ class Details extends Component {
                     <ButtonContainer
                       detailCart
                       disabled={inCart}
-                      onClick={value => {
+                      onClick={() => {
                         value.addToCart(id);
+                        value.openModal(id);
                       }}
                     >
                       {inCart ? "In Cart" : "Add To Cart"}

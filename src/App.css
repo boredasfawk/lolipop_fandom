@@ -12,6 +12,10 @@ body {
   color: var(--mainDark) !important;
 }
 
+.marginBottom {
+  margin-bottom: 0.2rem !important;
+}
+
 .text-title {
   font-family: "Permanent Marker", cursive;
   letter-spacing: 0.3rem;
