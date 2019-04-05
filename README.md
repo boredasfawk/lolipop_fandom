@@ -22,3 +22,5 @@ user should be able to make a profile(name number address)
 user profile info can be transfered into paypal sandbox site
 user can save items and see them in profile
 if user tries to resave items popup displays that item is already in saved
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e03e930-862a-424b-80c9-5ab788ac9801/deploy-status)](https://app.netlify.com/sites/determined-cori-824cba/deploys)
