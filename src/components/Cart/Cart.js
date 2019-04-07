@@ -13,10 +13,9 @@ class Cart extends Component {
     return (
       <section
         style={{
-          background: "#fff"
-          //   height: "100vh",
-          //   position: "relative",
-          //   zIndex: "100"
+          background: "#fff",
+          height: "100vh",
+          position: "relative"
         }}
       >
         <ProductConsumer>
