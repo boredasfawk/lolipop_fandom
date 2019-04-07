@@ -12,12 +12,12 @@ class Cart extends Component {
   render() {
     return (
       <section
-      // style={{
-      //   background: "#fff",
-      //   height: "100vh",
-      //   position: "relative",
-      //   zIndex: "100"
-      // }}
+        style={{
+          background: "#fff"
+          //   height: "100vh",
+          //   position: "relative",
+          //   zIndex: "100"
+        }}
       >
         <ProductConsumer>
           {value => {
