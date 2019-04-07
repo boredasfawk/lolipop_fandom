@@ -1,6 +1,6 @@
-# lolipop_fandom
-mock lolicon clothing store
+# lolix
 
+mock clothing store
 
 -tecnologies-
 using Html Css(Bootstrap, Styled-Components), JS, React(React Router, Context api)
