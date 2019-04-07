@@ -10,14 +10,7 @@ class VideoPlayer extends Component {
   render() {
     return (
       <React.Fragment>
-        <video
-          style={vidStyle}
-          src={Video}
-          type="video/mp4"
-          autoPlay
-          controls
-          loop
-        />
+        <video style={vidStyle} src={Video} type="video/mp4" autoPlay loop />
       </React.Fragment>
     );
   }
