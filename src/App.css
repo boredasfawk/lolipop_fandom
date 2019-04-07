@@ -1,15 +1,15 @@
 :root {
-  --mainBlue: #2a2a72;
-  --lightBlue: #009ffd;
+  --mainBlue: #eba930;
+  --lightBlue: #529fcce7;
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
-  --mainYellow: #ffa400;
+  --mainYellow: #d85050f1;
 }
 
 body {
   font-family: "Oswald", sans-serif !important;
-  background: var(--mainWhite) !important;
-  color: var(--mainDark) !important;
+  background: #000 !important;
+  color: var(--mainYellow) !important;
 }
 
 .marginBottom {
@@ -17,7 +17,7 @@ body {
 }
 
 .text-title {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Abel", sans-serif;
   letter-spacing: 0.3rem;
 }
 .text-blue {
@@ -44,4 +44,15 @@ body {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+
+.card {
+  background-color: #000 !important;
+}
+
+@media (max-width: 770px) {
+  nav > h2 {
+    margin: 0 !important;
+    font-size: 3rem !important;
+  }
 }

@@ -17,7 +17,12 @@ class Product extends Component {
                 onClick={() => value.setDetailProduct(id)}
               >
                 <Link to="/details">
-                  <img src={img} alt={id} className="card-img-top" />
+                  <img
+                    src={img}
+                    alt={id}
+                    className="card-img-top"
+                    onClick={() => value.videoClose()}
+                  />
                 </Link>
                 <button
                   className="cart-btn"

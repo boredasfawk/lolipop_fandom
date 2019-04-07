@@ -17,12 +17,18 @@ class ProductProvider extends Component {
       modalProduct: detailProduct,
       cartSubtotal: 0,
       cartTax: 0,
-      cartTotal: 0
+      cartTotal: 0,
+      videoPlay: true
     };
   }
   // once component is loaded sets products to copy of original product data
   componentDidMount() {
     this.setProducts();
+    this.setState(() => {
+      return {
+        videoPlay: true
+      };
+    });
   }
   // makes copy of original objects/values to stop original from updating
   setProducts = () => {
@@ -200,6 +206,15 @@ class ProductProvider extends Component {
       };
     });
   };
+
+  // closes video player after user leaves page
+  videoClose = () => {
+    this.setState(() => {
+      return {
+        videoPlay: false
+      };
+    });
+  };
   render() {
     return (
       <ProductContext.Provider
@@ -212,7 +227,8 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
-          clearCart: this.clearCart
+          clearCart: this.clearCart,
+          videoClose: this.videoClose
         }}
       >
         {this.props.children}

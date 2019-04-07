@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
+import VideoPlayer from "./Video";
 import { ProductConsumer } from "../Context";
 
 class ProductList extends Component {
@@ -8,8 +9,14 @@ class ProductList extends Component {
     return (
       <React.Fragment>
         <div className="py-5">
+          <ProductConsumer>
+            {value => {
+              const { videoPlay } = value;
+              return videoPlay ? <VideoPlayer /> : null;
+            }}
+          </ProductConsumer>
           <div className="container">
-            <Title name="Our" title="products" />
+            <Title name="Popular" title="products" />
 
             {/* products row */}
             <div className="row">

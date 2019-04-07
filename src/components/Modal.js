@@ -37,7 +37,10 @@ class Modal extends Component {
                       <Link to="/cart">
                         <ButtonContainer
                           detailCart
-                          onClick={() => closeModal()}
+                          onClick={() => {
+                            closeModal();
+                            value.videoClose();
+                          }}
                         >
                           <h6 className="marginBottom">Go To Cart</h6>
                         </ButtonContainer>

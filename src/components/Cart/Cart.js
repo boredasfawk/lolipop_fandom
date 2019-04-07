@@ -11,7 +11,13 @@ class Cart extends Component {
   state = {};
   render() {
     return (
-      <section>
+      <section
+        style={{
+          background: "#fff",
+          height: "100vh",
+          position: "relative"
+        }}
+      >
         <ProductConsumer>
           {value => {
             const { cart } = value;
@@ -19,7 +25,11 @@ class Cart extends Component {
             if (cart.length > 0) {
               return (
                 <React.Fragment>
-                  <Title name="your" title="cart" />
+                  <Title
+                    name="your"
+                    title="cart"
+                    style={{ position: "relative" }}
+                  />
                   <CartColumns />
                   <CartList value={value} />
                   <CartTotals value={value} history={this.props.history} />
