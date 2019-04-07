@@ -15,7 +15,8 @@ class Cart extends Component {
         style={{
           background: "#fff",
           height: "100vh",
-          position: "relative"
+          position: "relative",
+          zIndex: "100"
         }}
       >
         <ProductConsumer>
