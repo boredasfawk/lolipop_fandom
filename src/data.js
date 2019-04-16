@@ -2,7 +2,7 @@ export const storeProducts = [
   {
     id: 1,
     title: "Printed long-sleeve T-Shirt",
-    img: "img/product-1.png",
+    img: "img/product-1.jpg",
     price: 500,
     company: "YOHJI YAMAMOTO",
     info:
@@ -14,7 +14,7 @@ export const storeProducts = [
   {
     id: 2,
     title: "Entrust Life print shirt",
-    img: "img/product-2.png",
+    img: "img/product-2.jpg",
     price: 1200,
     company: "YOHJI YAMAMOTO",
     info:
@@ -26,7 +26,7 @@ export const storeProducts = [
   {
     id: 3,
     title: "patch emb. oversized shirt",
-    img: "img/product-3.png",
+    img: "img/product-3.jpg",
     price: 1400,
     company: "YOHJI YAMAMOTO",
     info:
@@ -50,7 +50,7 @@ export const storeProducts = [
   {
     id: 5,
     title: "Baby Ring box bag",
-    img: "img/product-5.png",
+    img: "img/product-5.jpg",
     price: 1400,
     company: "BALMAIN",
     info:
@@ -62,7 +62,7 @@ export const storeProducts = [
   {
     id: 6,
     title: "logo stripe denim bodysuit",
-    img: "img/product-6.png",
+    img: "img/product-6.jpg",
     price: 1700,
     company: "BALMAIN",
     info:
@@ -74,7 +74,7 @@ export const storeProducts = [
   {
     id: 7,
     title: "leather panel jeans",
-    img: "img/product-7.png",
+    img: "img/product-7.jpg",
     price: 1300,
     company: "GIVENCHY",
     info:
@@ -86,7 +86,7 @@ export const storeProducts = [
   {
     id: 8,
     title: "mini Antigona bag",
-    img: "img/product-8.png",
+    img: "img/product-8.jpg",
     price: 2000,
     company: "GIVENCHY",
     info:
@@ -100,7 +100,7 @@ export const storeProducts = [
 export const detailProduct = {
   id: 1,
   title: "Printed long-sleeve T-Shirt",
-  img: "img/product-1.png",
+  img: "img/product-1.jpg",
   price: 500,
   company: "YOHJI YAMAMOTO",
   info:
