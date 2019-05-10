@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Product from "./Product";
 import Title from "./Title";
-import VideoPlayer from "./Video";
+// import VideoPlayer from "./Video";
 import { ProductConsumer } from "../Context";
 
 class ProductList extends Component {
@@ -9,12 +9,12 @@ class ProductList extends Component {
     return (
       <React.Fragment>
         <div className="py-5">
-          <ProductConsumer>
+          {/* <ProductConsumer>
             {value => {
               const { videoPlay } = value;
               return videoPlay ? <VideoPlayer /> : null;
             }}
-          </ProductConsumer>
+          </ProductConsumer> */}
           <div className="container">
             <Title name="Popular" title="products" />
 
